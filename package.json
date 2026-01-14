@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "set-env": "node set-env.js",
+    "prestart": "npm run set-env",
     "start": "ng serve",
+    "prebuild": "npm run set-env",
     "build": "ng build --configuration production",
+    "prewatch": "npm run set-env",
     "watch": "ng build --watch --configuration development",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist/angular-website/browser"

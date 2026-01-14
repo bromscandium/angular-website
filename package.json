@@ -11,7 +11,7 @@
     "prewatch": "npm run set-env",
     "watch": "ng build --watch --configuration development",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist/angular-website/browser"
+    "deploy": "gh-pages -d dist/browser"
   },
   "prettier": {
     "printWidth": 100,

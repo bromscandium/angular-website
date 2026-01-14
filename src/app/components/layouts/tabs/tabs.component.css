@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.tabs-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  justify-content: center;
+}

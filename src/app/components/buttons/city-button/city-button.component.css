@@ -1,0 +1,15 @@
+.city-button {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  user-select: none;
+
+}
+
+@media (max-width: 540px) {
+  .city-button {
+    font-size: var(--font-size-lg);
+  }
+}

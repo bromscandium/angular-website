@@ -1,0 +1,46 @@
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-lg);
+}
+
+.info-item {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.info-label {
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+}
+
+.info-value {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.quality-good {
+  color: var(--color-success);
+}
+
+.quality-moderate {
+  color: var(--color-warning);
+}
+
+.quality-poor {
+  color: var(--color-error);
+}
+
+@media (max-width: 540px) {
+  .weather-info {
+    padding: 0 var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+
+  .info-label,
+  .info-value {
+    font-size: var(--font-size-sm);
+  }
+}

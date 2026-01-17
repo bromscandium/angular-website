@@ -11,7 +11,7 @@ import { formatTemperature } from '../../../store/units';
       <div class="location-info" (click)="onSelect.emit()">
         <div class="location-header">
           <h3 class="location-city">{{ city }}</h3>
-          <app-delete-button (onClick)="handleDelete()" />
+          <app-delete-button (onClick)="handleDelete($event)" />
         </div>
         <p class="location-country">{{ country }}</p>
         @if (lastSearched) {
@@ -68,7 +68,8 @@ export class LocationCardComponent {
     });
   }
 
-  handleDelete(): void {
+  handleDelete(event: MouseEvent): void {
+    event.stopPropagation();
     this.onDelete.emit();
   }
 

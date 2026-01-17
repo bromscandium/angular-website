@@ -7,13 +7,13 @@ import { IconSizeService } from '../../../services/icon-size.service';
   standalone: true,
   imports: [BinIconComponent],
   template: `
-    <button (click)="onClick.emit()">
+    <button (click)="onClick.emit($event)">
       <app-bin-icon [width]="iconSize" [height]="iconSize" />
     </button>
   `
 })
 export class DeleteButtonComponent {
-  @Output() onClick = new EventEmitter<void>();
+  @Output() onClick = new EventEmitter<MouseEvent>();
   iconSize: number;
 
   constructor(private iconSizeService: IconSizeService) {

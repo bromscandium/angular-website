@@ -3,6 +3,6 @@
   border-radius: 8px;
 }
 
-:host-context([data-theme="dark"]) .logo-icon {
+[data-theme="dark"] .logo-icon {
   border-color: white;
 }

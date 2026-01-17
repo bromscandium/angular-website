@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { ArrowLeftIconComponent } from '../../icons/arrow-left-icon/arrow-left-icon.component';
 import { ArrowRightIconComponent } from '../../icons/arrow-right-icon/arrow-right-icon.component';
 import { ForecastCardComponent } from '../../cards/forecast-card/forecast-card.component';
@@ -59,7 +59,8 @@ export interface ForecastItem {
       </div>
     </div>
   `,
-  styleUrl: './forecast-section.component.css'
+  styleUrl: './forecast-section.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class ForecastSectionComponent implements OnInit, OnDestroy {
   @Input() forecastData: ForecastItem[] = [];

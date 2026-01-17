@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { LocationCardComponent } from '../../cards/location-card/location-card.component';
 import { ArrowLeftIconComponent } from '../../icons/arrow-left-icon/arrow-left-icon.component';
 import { ArrowRightIconComponent } from '../../icons/arrow-right-icon/arrow-right-icon.component';
@@ -40,6 +40,7 @@ import { SavedLocation } from '../../../store/locations';
                 (onSelect)="onSelect.emit(location)"
                 (onDelete)="onDelete.emit(location.id)"
               />
+                
             }
           </div>
 
@@ -56,7 +57,8 @@ import { SavedLocation } from '../../../store/locations';
       </div>
     }
   `,
-  styleUrl: './last-location-section.component.css'
+  styleUrl: './last-location-section.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class LastLocationSectionComponent implements OnInit, OnDestroy {
   @Input() locations: SavedLocation[] = [];

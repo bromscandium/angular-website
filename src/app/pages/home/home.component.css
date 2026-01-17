@@ -1,8 +1,3 @@
-:host {
-  display: block;
-  width: 100%;
-}
-
 .home-container {
   display: flex;
   flex-direction: column;
@@ -12,10 +7,8 @@
   min-height: 85vh;
 }
 
-.search-section,
-.last-locations-section {
+.search-section{
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
 }
 

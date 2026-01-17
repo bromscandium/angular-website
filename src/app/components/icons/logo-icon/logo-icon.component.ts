@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-logo-icon',
@@ -12,7 +12,8 @@ import { Component, Input } from '@angular/core';
       [alt]="alt"
     />
   `,
-  styleUrl: './logo-icon.component.css'
+  styleUrl: './logo-icon.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class LogoIconComponent {
   @Input() width = 50;

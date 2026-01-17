@@ -10,7 +10,12 @@ import { IconSizeService } from '../../../services/icon-size.service';
     <button (click)="onClick.emit()" aria-label="Settings">
       <app-logo-icon [width]="iconSize" [height]="iconSize" />
     </button>
-  `
+  `,
+  styles: [`
+    :host {
+      display: contents;
+    }
+  `]
 })
 export class LogoButtonComponent {
   @Output() onClick = new EventEmitter<void>();

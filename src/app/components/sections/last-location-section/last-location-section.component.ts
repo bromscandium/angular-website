@@ -13,12 +13,11 @@ import { SavedLocation } from '../../../store/locations';
   template: `
     @if (locations.length) {
       <div class="last-locations-section">
-        <h2 class="section-title">Last locations:</h2>
-
         <div class="locations-carousel">
-          @if (showArrows && canScrollLeft) {
+          @if (showArrows) {
             <button
               class="carousel-arrow carousel-arrow-left"
+              [disabled]="!canScrollLeft"
               (click)="scrollLeft()"
             >
               <app-arrow-left-icon [width]="iconSize" [height]="iconSize" />
@@ -44,9 +43,10 @@ import { SavedLocation } from '../../../store/locations';
             }
           </div>
 
-          @if (showArrows && canScrollRight) {
+          @if (showArrows) {
             <button
               class="carousel-arrow carousel-arrow-right"
+              [disabled]="!canScrollRight"
               (click)="scrollRight()"
             >
               <app-arrow-right-icon [width]="iconSize" [height]="iconSize" />

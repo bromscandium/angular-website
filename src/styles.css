@@ -79,8 +79,8 @@ body {
   background-color: var(--color-bg-secondary);
   line-height: 1.5;
   transition:
-    background-color var(--transition-normal),
-    color var(--transition-normal);
+          background-color var(--transition-normal),
+          color var(--transition-normal);
 }
 
 #root,
@@ -115,10 +115,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  display: block;
-}
-
 .text-primary {
   color: var(--color-text-primary);
 }
@@ -149,11 +145,4 @@ img {
 
 [data-theme="dark"] img[src*="/icons/"] {
   filter: brightness(0) invert(1);
-}
-
-.forecast-loading {
-  text-align: center;
-  padding: var(--spacing-xl);
-  color: var(--color-text-secondary);
-  width: 100%;
 }
